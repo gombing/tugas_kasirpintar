@@ -1,10 +1,10 @@
-account
-- admin
+<p>account</p>
+<p>admin
 username :admin@kasirpintar.com
-password :adminkasirpintar
-- owner
+password :adminkasirpintar</p>
+<p>owner
 username :owner@kasirpintar.com
-password :ownerkasirpintar
--staf
+password :ownerkasirpintar</p>
+<p>staf
 username :staf@kasirpintar.com
-password :stafkasirpintar.com
+password :stafkasirpintar.com</p>
