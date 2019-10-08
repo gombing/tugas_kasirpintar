@@ -17,13 +17,16 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/admin/product', 'ProductController@index')->name('admin.product');
-Route::get('/admin/product/create', 'ProductController@create')->name('admin.product.create');
-Route::post('/admin/product/store', 'ProductController@store')->name('admin.product.store');
-Route::post('/admin/product/update-name', 'ProductController@updateName')->name('admin.product.update.name');
-Route::post('/admin/product/update-sellPrice', 'ProductController@updateSellPrice')->name('admin.product.update.sellPrice');
-Route::post('/admin/product/update-buyPrice', 'ProductController@updateBuyPrice')->name('admin.product.update.buyPrice');
-Route::post('/admin/product/update-stock', 'ProductController@updateStock')->name('admin.product.update.stock');
-Route::get('/admin/product/delete/{id}','ProductController@delete')->name('admin.product.delete');
+Route::prefix('admin')->group(function () {
+    Route::get('product', 'ProductController@index')->name('admin.product');
+    Route::get('product/create', 'ProductController@create')->name('admin.product.create');
+    Route::post('product/store', 'ProductController@store')->name('admin.product.store');
+    Route::post('product/update-name', 'ProductController@updateName')->name('admin.product.update.name');
+    Route::post('product/update-sellPrice', 'ProductController@updateSellPrice')->name('admin.product.update.sellPrice');
+    Route::post('product/update-buyPrice', 'ProductController@updateBuyPrice')->name('admin.product.update.buyPrice');
+    Route::post('product/update-stock', 'ProductController@updateStock')->name('admin.product.update.stock');
+    Route::get('product/delete/{id}','ProductController@delete')->name('admin.product.delete');
+});
+
 
 
